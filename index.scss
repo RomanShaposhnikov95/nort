@@ -457,6 +457,78 @@ body {
 
 
 
+.accordion {
+  width: 100%;
+  &__panel {
+    margin-top: 10px;
+    background-color: #fff;
+    //border: 1px solid black;
+
+    overflow: hidden;
+    transition: height 0.35s ease-in-out;
+  }
+
+  &__heading {
+    .is-active & {
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid black;
+
+    .is-active & {
+      border: 1px solid #3D89CC;
+      border-bottom: unset;
+      padding-bottom: 10px;
+    }
+
+    &::after {
+      content: url("image/ic-down.svg");
+      flex-shrink: 0;
+
+      width: 1.25rem;
+      aspect-ratio: 1;
+      margin-left: auto;
+      color: #3D89CC;
+      transition: transform 0.2s ease-in-out;
+
+      .is-active & {
+        //background-color: yellow;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+    margin-top: -1px;
+    transition: height 0.10s ease-in-out;
+    overflow: hidden;
+
+    .is-active & {
+      display: block;
+      border: 1px solid #3D89CC;
+      border-top: unset;
+    }
+  }
+
+  &__inner {
+    padding: 0 2.50rem 1rem 1.25rem;
+  }
+}
+
+.src {
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+
+
+
 
 
 
