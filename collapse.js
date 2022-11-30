@@ -96,10 +96,10 @@ let slideDown = (target, duration = 500) => {
     }, duration);
 };
 
-let slideToggle = (target, duration = 500) => {
-    if (window.getComputedStyle(target).display === "none") {
-        return slideDown(target, duration);
-    } else {
-        return slideUp(target, duration);
-    }
-};
+// let slideToggle = (target, duration = 500) => {
+//     if (window.getComputedStyle(target).display === "none") {
+//         return slideDown(target, duration);
+//     } else {
+//         return slideUp(target, duration);
+//     }
+// };
